@@ -1,0 +1,20 @@
+1. SELECT * FROM users;
+
+2. SELECT * FROM games;
+
+3. SELECT * FROM users WHERE age > 25;
+
+4. SELECT * FROM games WHERE release_date > '2022-01-01';
+
+5. SELECT * FROM games WHERE hours_played > 50;
+
+6. SELECT u.id, u.name, u.age, g.name_of_game, g.release_date, g.hours_played
+   FROM users u
+   JOIN games g ON u.id = g.user_id;
+
+7. SELECT u.id, u.name, u.age
+   FROM users u
+   JOIN games g ON u.id = g.user_id
+   WHERE g.name_of_game = 'Super Mario';
+
+8. SELECT AVG(age) as average_age FROM users;
